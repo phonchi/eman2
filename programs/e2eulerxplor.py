@@ -710,7 +710,7 @@ def set_included_0(e):
 
 
 class EMAsymmetricUnitInspector(EMSymInspector):
-	au_selected = QtCore.pyqtSignal(QString, QString)
+	au_selected = QtCore.pyqtSignal(str, str)
 
 	def __init__(self,target,enable_trace=False,enable_og=False) :
 		EMSymInspector.__init__(self,target,enable_trace=enable_trace,enable_og=enable_og)
@@ -731,8 +731,8 @@ class EMAsymmetricUnitInspector(EMSymInspector):
 		for e in combo_entries:
 			self.combo.addItem(e)
 
-		self.combo.currentIndexChanged[QString].connect(self.on_combo_change)
-		self.combo.currentIndexChanged[QString].connect(self.on_combo_change)
+		self.combo.currentIndexChanged[str].connect(self.on_combo_change)
+		self.combo.currentIndexChanged[str].connect(self.on_combo_change)
 
 		self.au_tab.vbl.addWidget(self.combo)
 		self.refine_dir = combo_entries[0]
