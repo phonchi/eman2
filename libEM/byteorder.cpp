@@ -35,8 +35,11 @@
  
 #include "byteorder.h"
 #include "util.h"
+#include <vector>
 
 using namespace EMAN;
+
+std::vector<int> aaa = {1,3,6};
 
 bool ByteOrder::is_host_endian_checked = false;
 bool ByteOrder::host_big_endian = false;
